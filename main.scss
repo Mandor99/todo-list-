@@ -1,0 +1,61 @@
+@import './global.scss';
+@import './colors';
+form {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	@media all and (max-width: 576px) {
+		justify-content: center;
+	}
+
+	.inputs {
+		display: flex;
+	}
+	input#item {
+		@extend %inputStyle;
+	}
+	button#add {
+		color: map-get($colors, 'f-c');
+	}
+	#filter {
+		margin-left: 50px;
+		@extend .btn;
+		text-transform: capitalize;
+		position: relative;
+		appearance: none;
+
+		@media all and (max-width: 768px) {
+			margin-left: 0;
+		}
+	}
+}
+#items {
+	// background-color: rgb(83, 56, 119);
+	margin-top: $margin-Y;
+	overflow: hidden;
+	// width: 75%;
+
+	ul#lists {
+		list-style: none;
+
+		.list {
+			overflow: hidden;
+			display: flex;
+			margin-bottom: $margin-Y / 5;
+
+			li {
+				@extend %inputStyle;
+			}
+			#compelete {
+				color: #fff;
+				background-color: map-get($colors, 't-c');
+			}
+			#delete {
+				background-color: map-get($colors, 'f-c');
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>todo app</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="./dist/css/main.css" />
+	</head>
+	<body>
+		<section class="container">
+			<form action="" id="form">
+				<div class="inputs">
+					<input type="text" name="" id="item" placeholder="task ..." />
+					<button type="submit" class="btn" id="add">
+						<i class="fas fa-plus-square"></i>
+					</button>
+				</div>
+				<select name="" id="filter" class="">
+					<option value="all">all</option>
+					<option value="compelete">compeleted</option>
+					<option value="un-compelete">un-compeleted</option>
+				</select>
+			</form>
+			<div id="items">
+				<ul id="lists"></ul>
+			</div>
+		</section>
+
+		<script src="./src/app.js"></script>
+	</body>
+</html>
